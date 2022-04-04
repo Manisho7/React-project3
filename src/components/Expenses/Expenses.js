@@ -3,6 +3,7 @@ import "./Expenses.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from './ExpensesList';
+import ExpensesChart from "./ExpensesChart";
 
 const Expenses = (props) => {
   /*useState is a function used to change the value of an obj in a component dynamically by running the component
@@ -27,6 +28,7 @@ const Expenses = (props) => {
         selected={filteredYear}
         onFilterChange={filteredYearHandler}
       />
+      <ExpensesChart expenses={filteredExpensesArray} />
       <ExpensesList items={filteredExpensesArray}/>
       {/*
       //this way you can conditionally check and return
